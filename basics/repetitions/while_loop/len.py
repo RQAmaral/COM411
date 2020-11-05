@@ -1,0 +1,1 @@
+print("Bop "*int(len(input("Please enter a phrase:\n"))))
