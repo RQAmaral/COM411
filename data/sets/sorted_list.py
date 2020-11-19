@@ -5,9 +5,21 @@ def observed():
     observations.append(observation)
   return observations
 
+def remove_observations(observations):
+  boolean = True
+  while boolean == True:
+      yes_or_no = input("do you wish to remove any observation?\n")
+      if yes_or_no == "yes":
+        target = input("input string to be removed\n")
+        for observation in observations:
+          if observation == target:
+            observations.remove(observation)
+      elif yes_or_no == "no":
+        return observations
+
 def run():
   print("Counting...")
-  local_variable = observed()
+  local_variable = remove_observations(observed())
   counting = set()
 
   for observation in local_variable:
